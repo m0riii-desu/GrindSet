@@ -16,15 +16,27 @@ class LoginActivity : Activity() {
         val userName = findViewById<EditText>(R.id.userInput)
 
         loginButton.setOnClickListener {
+            val inputName = userName.text.toString()
 
-            val username = userName.text.toString()
+            // Retrieve the "Registered" name from SharedPreferences
+            val registeredName = GrindsetPrefs.getUsername(this)
 
-            val intent = Intent(this, MainScreen::class.java)
-            intent.putExtra("username_key", username)
+            if (inputName.isEmpty()) {
+                userName.error = "Please enter a username"
+                return@setOnClickListener
+            }
 
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            // Compares input with stored data
+            if (inputName == registeredName) {
+                // Update session to logged in
+                GrindsetPrefs.loginUser(this, inputName)
 
-            startActivity(intent)
+                val intent = Intent(this, MainScreen::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                startActivity(intent)
+            } else {
+                userName.error = "Username not found. Please register first!"
+            }
         }
 
         registerButton.setOnClickListener {
