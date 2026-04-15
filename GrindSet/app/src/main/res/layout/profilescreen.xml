@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/backButton"
+        android:src="@drawable/arrow_back"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        app:cardBackgroundColor="#808080"
+        app:cardCornerRadius="10dp"
+        app:strokeColor="#000000"
+        app:strokeWidth="4dp"
+        >
+
+        <TextView
+            android:id="@+id/myProfileText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Profile"
+            android:background="@drawable/yellowbutton"
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/black"
+            />
+        
+        <TextView
+            android:id="@+id/profileIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username: "
+            android:textColor="@color/black"
+            android:background="@drawable/yellowbutton"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="70dp"
+            />
+
+        <TextView
+            android:id="@+id/displayName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="username"
+            android:textColor="@color/white"
+            android:background="@drawable/blackbutton"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:padding="10dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="70dp"
+            />
+    </com.google.android.material.card.MaterialCardView>
+
+</RelativeLayout>

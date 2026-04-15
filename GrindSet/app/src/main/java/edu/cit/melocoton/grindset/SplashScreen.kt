@@ -10,9 +10,9 @@ class SplashScreen : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.splashscreen) //holds the UI
+        setContentView(R.layout.splashscreen)
 
-        val layout = findViewById<RelativeLayout>(R.id.splashScreen)  // ID of the whole UI
+        val layout = findViewById<RelativeLayout>(R.id.splashScreen)
 
         layout.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
