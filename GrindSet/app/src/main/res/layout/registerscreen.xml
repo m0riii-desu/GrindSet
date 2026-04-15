@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/LOGO"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/grindset_logo"
+        android:scaleType="fitCenter"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="50dp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/LoginTitle"
+        android:text="Log In"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_below="@id/LOGO"
+        />
+    <!--    username-->
+
+    <ImageButton
+        android:id="@+id/userLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/user_logo"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@id/LoginTitle"
+        android:background="@android:color/transparent">
+
+    </ImageButton>
+
+    <EditText
+        android:id="@+id/userInput"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignTop="@id/userLogo"
+        android:layout_toEndOf="@id/userLogo"
+        android:background="@drawable/text_border"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Username"
+        android:textColor="@color/black"
+        android:paddingStart="12dp"
+        />
+
+
+    <ImageButton
+        android:id="@+id/emailLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/username_logo"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@id/userInput"
+        android:background="@android:color/transparent">
+
+    </ImageButton>
+
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/userLogo"
+        android:layout_alignTop="@id/emailLogo"
+        android:layout_toEndOf="@id/emailLogo"
+        android:background="@drawable/text_border"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Email Address"
+        android:textColor="@color/black"
+        android:paddingStart="12dp"
+        />
+
+    <!--    password-->
+    <ImageButton
+        android:id="@+id/passLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/password_logo"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@id/emailInput"
+        android:background="@android:color/transparent">
+
+    </ImageButton>
+
+    <EditText
+        android:id="@+id/passInput"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/emailInput"
+        android:layout_alignTop="@id/passLogo"
+        android:layout_toEndOf="@id/passLogo"
+        android:background="@drawable/text_border"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Password"
+        android:textColor="@color/black"
+        android:paddingStart="12dp">
+    </EditText>
+
+    <!--    confirm password-->
+    <ImageButton
+        android:id="@+id/conpassLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/password_logo"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@id/passLogo"
+        android:background="@android:color/transparent">
+
+    </ImageButton>
+
+    <EditText
+        android:id="@+id/conpassInput"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/passInput"
+        android:layout_alignTop="@id/conpassLogo"
+        android:layout_toEndOf="@id/passLogo"
+        android:background="@drawable/text_border"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:hint="Confirm Password"
+        android:paddingStart="12dp">
+    </EditText>
+
+    <!--    sign up-->
+    <TextView
+        android:id="@+id/SignUpButton"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/conpassInput"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/yellowbutton"
+        android:text="Sign Up"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:layout_centerInParent="true"
+        android:textSize="20dp"
+        android:padding="5dp"
+        />
+
+</RelativeLayout>

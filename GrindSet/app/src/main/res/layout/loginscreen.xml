@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageButton
+        android:id="@+id/LOGO"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/grindset_logo"
+        android:scaleType="fitCenter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:background="@android:color/transparent"
+        />
+
+
+    <ImageButton
+        android:id="@+id/userLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/user_logo"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@id/LOGO"
+        android:background="@android:color/transparent"
+        />
+
+
+    <EditText
+        android:id="@+id/userInput"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/LOGO"
+        android:layout_alignTop="@id/userLogo"
+        android:layout_toEndOf="@id/userLogo"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="45dp"
+        android:background="@drawable/text_border"
+        android:hint="Enter Username"
+        android:paddingStart="12dp"
+        android:textColor="@color/black">
+
+    </EditText>
+
+    <ImageButton
+        android:id="@+id/passLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/password_logo"
+        android:layout_marginLeft="25dp"
+        android:layout_below="@id/userLogo"
+        android:background="@android:color/transparent">
+
+    </ImageButton>
+
+    <EditText
+        android:id="@+id/passInput"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/userInput"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="45dp"
+        android:layout_toEndOf="@id/passLogo"
+        android:background="@drawable/text_border"
+        android:textColor="@color/black"
+        android:hint="Enter Password"
+        android:paddingStart="12dp"
+        />
+
+    <TextView
+        android:id="@+id/LoginButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/passInput"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="45dp"
+        android:layout_toEndOf="@id/passLogo"
+        android:background="@drawable/blackbutton"
+        android:text="Log In"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="15dp"
+        android:paddingTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/SignUpButton"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/LoginButton"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="85dp"
+        android:layout_toEndOf="@id/passLogo"
+        android:background="@drawable/yellowbutton"
+        android:text="Sign Up"
+        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textSize="15dp"
+        android:paddingTop="10dp"
+        />
+
+
+</RelativeLayout>
